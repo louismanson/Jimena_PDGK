@@ -1,8 +1,14 @@
+![N|Solid](http://www.maestriasenensenada.mx/images/modulos/cetys_universidad-logo.png)
+
+This application uses as a base the template of the polymer store to create an ecommerce that in a docker image that will later be uploaded and orchestrated by Google Cloud and Kubernetes.
+
 # SHOP
 
 ### Setup
 
 ##### Prerequisites
+
+Intall [Docker](https://www.docker.com)
 
 Install [polymer-cli](https://github.com/Polymer/polymer-cli):
 
@@ -65,3 +71,15 @@ This command serves the `es5-bundled` build version of the app:
 This command serves the `es6-unbundled` build version of the app:
 
     polymer serve build/es6-unbundled
+
+### Build docker Image
+Dockerfile is inside project, just run 
+
+    docker build -t shop .
+
+You can find my Docker image [on my Dockerhub](https://hub.docker.com/r/louismanson/shop/)
+
+### Run Container
+This command will create and run a container with the aplication runing in you local server on port 4000
+
+    docker run -p 4000:80 louismanson/shop:v1

@@ -83,3 +83,15 @@ You can find my Docker image [on my Dockerhub](https://hub.docker.com/r/louisman
 This command will create and run a container with the aplication runing in you local server on port 4000
 
     docker run -p 4000:80 louismanson/shop:v1
+
+###Pipeline
+
+```mermaid
+graph LR
+A[Polymer Shop] --> B(Github)
+B --> C((Bundle))
+C --> D((Docker Image))
+D --> E[G Registry]
+E --> F[Kubernetes]
+
+```

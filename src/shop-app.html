@@ -47,7 +47,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app-header {
         @apply --layout-fixed-top;
         z-index: 1;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(43, 152, 240,1);
         --app-header-shadow: {
           box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
           height: 10px;
@@ -56,11 +56,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       paper-icon-button {
-        color: var(--app-primary-color);
+        color: white;
       }
 
       .logo {
         text-align: center;
+        margin-top: 15px;
       }
 
       .logo a {
@@ -127,7 +128,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-size: 13px;
         font-weight: 500;
         text-decoration: none;
-        color: var(--app-primary-color);
+        color: white;
       }
 
       .cart-badge {
@@ -174,6 +175,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       iron-pages {
         max-width: 1440px;
         margin: 0 auto;
+        margin-bottom: 90px;
       }
 
       footer {
@@ -181,9 +183,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         bottom: 0;
         left: 0;
         right: 0;
+        padding-top: 20px;
         text-align: center;
         margin-top: 20px;
         line-height: 24px;
+        background-color: rgba(43, 152, 240,1);
       }
 
       footer > a {
@@ -194,15 +198,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       footer > a:hover {
         text-decoration: underline;
       }
+      footer > p {
+        color: white;
+      }
 
       .demo-label {
         box-sizing: border-box;
-        width: 120px;
-        padding: 6px;
-        margin: 8px auto 0;
-        background-color: var(--app-primary-color);
+        width: 100%;
+        text-align: left;
+        margin-left: 20px;
         color: white;
-        text-transform: uppercase;
       }
 
       /* small screen */
@@ -250,7 +255,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         num-items="{{numItems}}"
         total="{{total}}"></shop-cart-data>
 
-    <app-header role="navigation" id="header" effects="waterfall" condenses reveals>
+    <app-header role="navigation" id="header" effects="waterfall" condenses fixed>
       <app-toolbar>
         <div class="left-bar-item">
           <paper-icon-button
@@ -263,7 +268,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-icon-button icon="arrow-back" aria-label="Go back"></paper-icon-button>
           </a>
         </div>
-        <div class="logo" main-title><a href="/" aria-label="SHOP Home">SHOP</a></div>
+        <div class="logo" main-title><a href="/" aria-label="SHOP Home"><img src="images/logo.png"></a></div>
         <div class="cart-btn-container">
           <a href="/cart" tabindex="-1">
             <paper-icon-button icon="shopping-cart" aria-label$="Shopping cart: [[_computePluralizedQuantity(numItems)]]"></paper-icon-button>
@@ -324,8 +329,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </iron-pages>
 
     <footer>
-      <a href="https://www.polymer-project.org/1.0/toolbox/">Made by Polymer</a>
-      <div class="demo-label">Demo Only</div>
+      <div class="demo-label">CodeLouis Shop is an autorized reseller for Oficial Google Clothes.</div>
+      <div class="demo-label">2364 Paseo de las Americas #104-1328 San Diego, CA, 92154</div>
+      <p>All rights reserved to CodeLouis 2018.</p>
     </footer>
 
     <!-- a11y announcer -->

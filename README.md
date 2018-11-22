@@ -84,14 +84,6 @@ This command will create and run a container with the aplication runing in you l
 
     docker run -p 4000:80 louismanson/shop:v1
 
-###Pipeline
+### Pipeline
 
-```mermaid
-graph LR
-A[Polymer Shop] --> B(Github)
-B --> C((Bundle))
-C --> D((Docker Image))
-D --> E[G Registry]
-E --> F[Kubernetes]
 
-```

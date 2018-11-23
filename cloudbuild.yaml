@@ -8,7 +8,7 @@ steps:
   args:
   - set
   - image
-  - deployment/eshop-service
+  - deployment/eshop
   - clotheshop=gcr.io/$PROJECT_ID/clotheshop:v2.$BUILD_ID
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'

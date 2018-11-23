@@ -1,13 +1,12 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/clotheshop:v2', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/clotheshop:v2.$BUILD_ID', '.']
   timeout: 180s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/clotheshop:v2']
+  args: ['push', 'gcr.io/$PROJECT_ID/clotheshop:v2.$BUILD_ID']
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
   - set
   - image
-  - deployment
-  - eshop
-  - clotheshop=gcr.io/$PROJECT_ID/clotheshop:v2
+  - deployment/eshop
+  - clotheshop=gcr.io/$PROJECT_ID/clotheshop:v2.$BUILD_ID

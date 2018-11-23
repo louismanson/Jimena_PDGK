@@ -10,6 +10,6 @@ steps:
   - image
   - deployment/eshop
   - clotheshop=gcr.io/$PROJECT_ID/clotheshop:v2.$BUILD_ID
-    env:
+  env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=clothes-shop-cluster'

@@ -10,6 +10,6 @@ RUN bower --allow-root install
 RUN npm install
 RUN polymer build
 
-FROM nginx:latest
+FROM nginx:alpine
 MAINTAINER Luis Hernandez <manson.louis@gmail.com>
 COPY --from=build-env  app/build/es5-bundled /usr/share/nginx/html

@@ -1,6 +1,6 @@
 FROM insready/polymer-dev:latest AS build-env
 WORKDIR /app
-COPY shop /app
+COPY Shop /app
 RUN polymer build
 
 FROM nginx:latest
